@@ -1,21 +1,40 @@
-# Ignore MySQL database files
-inventory-service/docker/mysql/data/
+HELP.md
+target/
+volume-data/
+!.mvn/wrapper/maven-wrapper.jar
+!/src/main//target/
+!/src/test//target/
+inventory-service/docker/mysql/data/mysql.sock
+inventory-service/docker/mysql/data/*
+!inventory-service/docker/mysql/data/*.sql
+order-service/mysql/mysql.sock
+order-service/mysql/*
+!order-service/mysql/*.sql
 
-# Ignore MongoDB database files
-product-service/data/
-product-service/data/journal/
-product-service/data/*.wt
-product-service/data/*.log
-product-service/data/*.turtle
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-# Ignore system files
-*.sock
-*.pid
-*.log
-*.tmp
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
-# Ignore environment files
-.env
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!/src/main//build/
+!/src/test//build/
 
-# Normalize line endings
-* text=auto
+### VS Code ###
+.vscode/
